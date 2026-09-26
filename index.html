@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halkurd — Iraqi GNU/Linux Distribution</title>
+    <meta name="description" content="Halkurd is a GNU/Linux distribution based on Debian 12, created with authentic Iraqi hands.">
+    <meta property="og:title" content="Halkurd — Iraqi GNU/Linux Distribution">
+    <meta property="og:description" content="From the highest peak, your journey begins.">
+    <meta property="og:image" content="assets/logo.png">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-brand">
+                <img src="assets/logo.png" alt="Halkurd" class="nav-logo">
+                <span>Halkurd</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#how-to-use">How to Use</a></li>
+                <li><a href="#download-boot">Download & Boot</a></li>
+                <li><a href="#download" class="nav-btn">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="assets/logo.png" alt="Halkurd" class="hero-logo">
+            <h1>Halkurd</h1>
+            <p class="hero-subtitle">From the highest peak, your journey begins</p>
+            <p class="hero-desc">A GNU/Linux distribution based on Debian 12, crafted with authentic Iraqi hands.</p>
+            <div class="hero-buttons">
+                <a href="#download" class="btn btn-primary">Download Halkurd 1.0</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Halkurd</h2>
+            <div class="section-content">
+                <div class="about-text">
+                    <p><strong>Halkurd</strong> is a GNU/Linux distribution derived from <strong>Debian 12 (Bookworm)</strong>. Its name originates from <strong>Halkurd Mountain</strong> — the highest peak in Iraq (3,607 m).</p>
+                    <p>It is one of the first Iraqi GNU/Linux distributions — developed to address the scarcity of such projects in the country.</p>
+                    <p>As the developer, I hope this distribution helps foster the spread of programming in my homeland.</p>
+
+                    <h3>Key Features</h3>
+                    <ul class="features-list">
+                        <li>✅ Based on Debian 12 (Bookworm) — stability and reliability</li>
+                        <li>✅ Lightweight Xfce desktop environment</li>
+                        <li>✅ Pre-configured for programming and daily use</li>
+                        <li>✅ Custom Halkurd branding, logo, and wallpapers</li>
+                        <li>✅ Calamares installer for easy installation</li>
+                        <li>✅ Bilingual support (English + Arabic)</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="assets/wallpaper.jpg" alt="Halkurd Mountain" class="wallpaper-preview">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW TO USE -->
+    <section id="how-to-use" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">How to Use Halkurd</h2>
+            <div class="section-content">
+                <p class="intro">Halkurd is easy to use, relying on the lightweight and user-friendly <strong>Xfce</strong> desktop environment.</p>
+
+                <h3>Included Applications</h3>
+                <div class="apps-grid">
+                    <div class="app-card">
+                        <h4>Firefox</h4>
+                        <p>Web browser</p>
+                    </div>
+                    <div class="app-card">
+                        <h4>VLC</h4>
+                        <p>Media player</p>
+                    </div>
+                    <div class="app-card">
+                        <h4>GIMP</h4>
+                        <p>Image editor</p>
+                    </div>
+                    <div class="app-card">
+                        <h4>OBS Studio</h4>
+                        <p>Screen recording</p>
+                    </div>
+                    <div class="app-card">
+                        <h4>Tilix</h4>
+                        <p>Terminal emulator</p>
+                    </div>
+                    <div class="app-card">
+                        <h4>Thunar</h4>
+                        <p>File manager</p>
+                    </div>
+                </div>
+
+                <h3>Useful Terminal Commands</h3>
+                <div class="code-block">
+                    <pre><code># Update your system
+sudo apt update && sudo apt upgrade
+
+# Install software
+sudo apt install &lt;package-name&gt;
+
+# Show system information
+halkurd-fetch</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOAD & BOOT -->
+    <section id="download-boot" class="section">
+        <div class="container">
+            <h2 class="section-title">Download & Boot</h2>
+            <div class="section-content">
+                <h3>Requirements</h3>
+                <ul class="features-list">
+                    <li>64-bit x86_64 CPU</li>
+                    <li>2 GB RAM minimum (4 GB recommended)</li>
+                    <li>20 GB free disk space</li>
+                    <li>USB flash drive (4 GB+)</li>
+                </ul>
+
+                <h3>Steps to Boot</h3>
+                <ol class="steps-list">
+                    <li>Download the <strong>Halkurd ISO</strong> file (below).</li>
+                    <li>Write the ISO to a USB drive using <a href="https://etcher.balena.io/">balenaEtcher</a> or <code>dd</code>.</li>
+                    <li>Reboot your computer and enter boot menu (F12 / F2 / Del).</li>
+                    <li>Select your USB device from the boot menu.</li>
+                    <li>Choose <strong>"Halkurd 1 - Live"</strong> from the menu.</li>
+                    <li>Test Halkurd in Live mode — your data is safe.</li>
+                    <li>Click <strong>"Install Halkurd"</strong> on the desktop to install.</li>
+                </ol>
+
+                <div class="code-block">
+                    <pre><code># Write ISO to USB (Linux, replace /dev/sdX with your USB)
+sudo dd if=Halkurd-1.iso of=/dev/sdX bs=4M status=progress conv=fsync</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section id="download" class="section section-highlight">
+        <div class="container">
+            <h2 class="section-title">Download Halkurd 1.0</h2>
+            <div class="download-card">
+                <div class="download-info">
+                    <p class="download-version">Version 1.0 — amd64 (x86_64)</p>
+                    <p class="download-size">Size: ~1.1 GB</p>
+                    <p class="download-date">Released: September 2026</p>
+                </div>
+                <a href="https://github.com/karamuser/halkurd/releases/latest" class="btn btn-primary btn-large">
+                    ⬇️ Download ISO
+                </a>
+                <p class="download-note">
+                    After downloading, verify the <strong>SHA256 checksum</strong> (see below).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="Halkurd" class="footer-logo">
+                    <p>Halkurd — Iraqi GNU/Linux Distribution</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="https://github.com/karamuser/halkurd">GitHub</a></li>
+                        <li><a href="https://github.com/karamuser/halkurd/releases">Releases</a></li>
+                        <li><a href="https://github.com/karamuser/halkurd/issues">Report Issue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-legal">
+                    <h4>License</h4>
+                    <p>Halkurd is free software.<br>Released under GPL-3.0.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Halkurd Project. Built with 🏔️ in Iraq.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                  </html>
