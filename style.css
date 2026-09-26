@@ -1,0 +1,565 @@
+/* ============================================
+   HALKURD — Main Stylesheet
+   ============================================ */
+
+:root {
+    --halkurd-green-dark: #2D5016;
+    --halkurd-green-light: #7CB342;
+    --halkurd-green-accent: #8BC34A;
+    --black: #0a0a0a;
+    --dark: #1a1a1a;
+    --gray-dark: #2c2c2c;
+    --gray: #888;
+    --gray-light: #e8e8e8;
+    --white: #ffffff;
+    --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+    --font-mono: "SF Mono", Monaco, "Cascadia Code", "Noto Mono", monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(124, 179, 66, 0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.nav-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--gray-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--halkurd-green-light);
+}
+
+.nav-btn {
+    background: var(--halkurd-green-dark);
+    color: var(--white) !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    transition: background 0.2s !important;
+}
+
+.nav-btn:hover {
+    background: var(--halkurd-green-light);
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--black) 0%, var(--halkurd-green-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('assets/wallpaper.jpg') center/cover;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+}
+
+.hero-logo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    color: var(--halkurd-green-light);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    color: var(--gray-light);
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--halkurd-green-light);
+    color: var(--white);
+    box-shadow: 0 8px 24px rgba(124, 179, 66, 0.3);
+}
+
+.btn-primary:hover {
+    background: var(--halkurd-green-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(124, 179, 66, 0.5);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--white);
+}
+
+.btn-large {
+    font-size: 1.15rem;
+    padding: 1.1rem 2.5rem;
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+
+.section {
+    padding: 6rem 2rem;
+}
+
+.section-dark {
+    background: var(--dark);
+    color: var(--white);
+}
+
+.section-highlight {
+    background: linear-gradient(135deg, var(--halkurd-green-dark), var(--black));
+    color: var(--white);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: var(--halkurd-green-dark);
+    letter-spacing: -0.02em;
+}
+
+.section-dark .section-title,
+.section-highlight .section-title {
+    color: var(--halkurd-green-light);
+}
+
+.section-content {
+    font-size: 1.05rem;
+}
+
+.section-content p {
+    margin-bottom: 1.2rem;
+}
+
+.section-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 2rem 0 1rem;
+    color: var(--halkurd-green-dark);
+}
+
+.section-dark .section-content h3,
+.section-highlight .section-content h3 {
+    color: var(--halkurd-green-light);
+}
+
+.intro {
+    text-align: center;
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* ============================================
+   ABOUT
+   ============================================ */
+
+.about-text {
+    max-width: 100%;
+}
+
+.features-list {
+    list-style: none;
+    margin: 1rem 0 2rem;
+}
+
+.features-list li {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+}
+
+/* ============================================
+   APPS GRID
+   ============================================ */
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.25rem;
+    margin: 1.5rem 0 2rem;
+}
+
+.app-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(124, 179, 66, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.app-card:hover {
+    background: rgba(124, 179, 66, 0.1);
+    transform: translateY(-4px);
+}
+
+.app-card h4 {
+    font-size: 1.15rem;
+    color: var(--halkurd-green-light);
+    margin-bottom: 0.5rem;
+}
+
+.app-card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* ============================================
+   CODE BLOCKS
+   ============================================ */
+
+.code-block {
+    background: var(--black);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    border-left: 4px solid var(--halkurd-green-light);
+}
+
+.code-block pre {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.code-block code {
+    color: var(--halkurd-green-light);
+    background: none;
+    padding: 0;
+}
+
+/* ============================================
+   STEPS LIST
+   ============================================ */
+
+.steps-list {
+    list-style: none;
+    counter-reset: step;
+    margin: 1.5rem 0;
+}
+
+.steps-list li {
+    counter-increment: step;
+    padding: 0.75rem 0 0.75rem 3rem;
+    position: relative;
+    font-size: 1.05rem;
+}
+
+.steps-list li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--halkurd-green-dark);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.steps-list a {
+    color: var(--halkurd-green-light);
+}
+
+.steps-list code {
+    background: var(--gray-light);
+    color: var(--dark);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   DOWNLOAD CARD
+   ============================================ */
+
+.download-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--halkurd-green-light);
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.download-version {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--halkurd-green-light);
+    margin-bottom: 0.5rem;
+}
+
+.download-size,
+.download-date {
+    font-size: 1rem;
+    opacity: 0.85;
+    margin-bottom: 0.5rem;
+}
+
+.download-card .btn {
+    margin: 1.5rem 0;
+}
+
+.download-note {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 1rem;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+    background: var(--black);
+    color: var(--gray);
+    padding: 3rem 2rem 1.5rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.footer-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.footer-links h4,
+.footer-legal h4 {
+    color: var(--white);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--halkurd-green-light);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.85rem;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .nav-brand span {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .section {
+        padding: 4rem 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .download-card {
+        padding: 2rem 1.5rem;
+    }
+               }
