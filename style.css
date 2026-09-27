@@ -111,18 +111,23 @@ body {
 
 .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, 
-        #0a0a0a 0%, 
-        #1a3a0d 35%, 
-        #2D5016 70%, 
-        #3d6b1f 100%);
-    position: relative;
-    overflow: hidden;
+    background: linear-gradient(135deg, var(--black) 0%, var(--halkurd-green-dark) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 6rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('assets/wallpaper.jpg') center/cover;
+    opacity: 0.15;
+    z-index: 0;
 }
 
 .hero-content {
