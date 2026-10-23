@@ -1,6 +1,6 @@
 # 🏔️ Halkurd
 
-**Iraqi GNU/Linux Distribution based on Debian 12 (Bookworm) by karam**
+**Iraqi GNU/Linux Distribution based on Debian 12 (Bookworm) by karam or كرم الباري**
 
 Halkurd is a GNU/Linux distribution derived from **Debian 12 (Bookworm)**. Its name originates from **Halkurd Mountain** — the highest peak in Iraq (3,607 m).
 
