@@ -1,0 +1,8 @@
+{
+  "version": "1.0.1",
+  "from": ["1.0.f"],
+  "sha256": "1c067e7f0b30b217bf4c840386350923a8e5b07749d617ca6d89ace04f96f61e",
+  "size": 181,
+  "script": "install.sh",
+  "description": "Test dummy update"
+}
