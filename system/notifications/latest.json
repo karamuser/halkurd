@@ -1,1 +1,7 @@
-{ "id": "test-notify-001", "title": "Hello Halkurd!", "body": "This is a test notification from the dev team.", "priority": "high", "date": "2026-11-06" }
+{
+  "id": "msg-2026-11-08-official",
+  "title": "A New Beginning: Halkurd v1.0.f is Here!",
+  "body": "The first stable release of Halkurd Linux is officially available. Experience the stability of Debian with the power of rolling updates. Visit our website to download now!",
+  "priority": "high",
+  "date": "2026-11-08"
+}
