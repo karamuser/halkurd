@@ -1,0 +1,8 @@
+{
+  "version": "1.1",
+  "from": ["1.0.f"],
+  "sha256": "da9138aecbbd192911f424802b55cfb7adcf111e521fded4e5df8f4b039692c3",
+  "size": 346651,
+  "script": "install.sh",
+  "description": "Arabic language support, LibreOffice, KLC tool, and wallpaper cleanup."
+}
