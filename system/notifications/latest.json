@@ -1,7 +1,7 @@
 {
-  "id": "msg-2026-11-12-1",
-  "title": "a notify",
-  "body": "a new update to halkurd is will come soon ",
+  "id": "msg-2026-11-12-v1.1",
+  "title": "Halkurd v1.1 is Now Available!",
+  "body": "We've added full Arabic language support, LibreOffice, and the new halkurd-klc repair tool. Update your system now via terminal!",
   "priority": "high",
   "date": "2026-11-12"
 }
